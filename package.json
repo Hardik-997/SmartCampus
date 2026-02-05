@@ -1,10 +1,26 @@
 {
+  "name": "campus-issues-project",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "cd frontend && npm install && npm run build"
+  },
   "devDependencies": {
     "autoprefixer": "^10.4.23",
     "postcss": "^8.5.6",
-    "tailwindcss": "^4.1.18"
+    "tailwindcss": "^4.1.18",
+    "nodemon": "^3.0.2"
   },
   "dependencies": {
-    "markdown-pdf": "^11.0.0"
+    "markdown-pdf": "^11.0.0",
+    "express": "^4.18.2",
+    "mongoose": "^8.0.3",
+    "jsonwebtoken": "^9.0.2",
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^16.3.1",
+    "cors": "^2.8.5",
+    "multer": "^1.4.5-lts.1",
+    "cloudinary": "^1.41.1",
+    "express-validator": "^7.0.1"
   }
 }

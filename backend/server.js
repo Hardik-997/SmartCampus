@@ -5,6 +5,7 @@ import connectDB from './config/db.js';
 import authRoutes from './routes/auth.js';
 import issueRoutes from './routes/issues.js';
 import notificationRoutes from './routes/notifications.js';
+import { fileURLToPath } from 'url';
 
 // Load environment variables
 dotenv.config();
@@ -51,8 +52,10 @@ app.use((req, res) => {
 
 // Start server
 const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => {
-    console.log(`
+
+if (process.argv[1] === fileURLToPath(import.meta.url)) {
+    app.listen(PORT, () => {
+        console.log(`
 ╔════════════════════════════════════════════════════════╗
 ║                                                        ║
 ║   🎓 Smart Campus Issue Reporting System 🎓          ║
@@ -67,6 +70,7 @@ app.listen(PORT, () => {
 ║                                                        ║
 ╚════════════════════════════════════════════════════════╝
   `);
-});
+    });
+}
 
 export default app;
