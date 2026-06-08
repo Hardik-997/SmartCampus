@@ -119,6 +119,3 @@ Coming soon...
 
 MIT
 
-## 👨‍💻 Developer
-
-Built with ❤️ for making campus life better
